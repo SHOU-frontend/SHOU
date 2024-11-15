@@ -87,7 +87,7 @@ const ServiceOne = () => {
             <div className="    bg-orange-700 rounded-full p-3">
               <span className="text-2xl">✴️</span>
             </div>
-            <h3 className="text-xl font-semibold">Caps Chatbot</h3>
+            <h3 className="text-xl font-semibold">SHOU Chatbot</h3>
           </div>
           <div className="bg-neutral-800 p-4 rounded-lg flex flex-col space-y-2">
             <div className="flex justify-between">

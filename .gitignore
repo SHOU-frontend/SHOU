@@ -18,6 +18,7 @@ node_modules/
 # Next.js build output
 .next/
 out/
+.next\
 
 # Static files cache (if using static export)
 *.cache

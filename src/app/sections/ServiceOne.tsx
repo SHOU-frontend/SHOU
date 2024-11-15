@@ -32,7 +32,7 @@ const ServiceOne = () => {
       </div>
       <div>
         <h3 className="text-lg lg:text-xl font-semibold">Captions with AI</h3>
-        <p className="text-gray-400 text-sm lg:text-base">Your captions are generated with Caps AI</p>
+        <p className="text-gray-400 text-sm lg:text-base">Your captions are generated with SHOU</p>
       </div>
     </div>
 

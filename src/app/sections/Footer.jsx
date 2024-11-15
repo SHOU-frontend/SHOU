@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-wrap justify-between py-10">
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
             <div className="md:w-[270px]">
-              <h2 className="text-lg font-semibold">⚡ Caps AI</h2>
+              <h2 className="text-lg font-semibold">⚡ SHOU</h2>
               <b>The most powerful social media management platform for creators & businesses.</b>
               <p className="mt-2">Made in India with ❤️</p>
             </div>
@@ -76,7 +76,7 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="mt-10 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm">© 2024 Caps AI INC. All rights reserved.</p>
+          <p className="text-sm">© 2024 SHOU INC. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0 justify-center">
             <div className="w-8 h-8 rounded-full flex items-center justify-center border hover:bg-gray-800  cursor-pointer transition-colors">
               <Instagram className="w-4 h-4" />

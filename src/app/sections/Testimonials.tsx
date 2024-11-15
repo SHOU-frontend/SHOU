@@ -19,7 +19,7 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    text: "Caps AI has made managing our social media accounts a breeze!",
+    text: "SHOU has made managing our social media accounts a breeze!",
     imageSrc: avatar1.src,
     name: "Jane Smith",
     username: "@jane_smith",
@@ -31,19 +31,19 @@ const testimonials: Testimonial[] = [
     username: "@alex_johnson",
   },
   {
-    text: "Highly recommend Caps AI for anyone looking to streamline their social media.",
+    text: "Highly recommend SHOU for anyone looking to streamline their social media.",
     imageSrc: avatar3.src,
     name: "Emily Brown",
     username: "@emily_brown",
   },
   {
-    text: "Effortlessly schedule posts on multiple platforms with Caps AI!",
+    text: "Effortlessly schedule posts on multiple platforms with SHOU!",
     imageSrc: avatar4.src,
     name: "Michael Wilson",
     username: "@michael_wilson",
   },
   {
-    text: "Caps AI’s user-friendly interface is perfect for beginners and pros alike.",
+    text: "SHOU’s user-friendly interface is perfect for beginners and pros alike.",
     imageSrc: avatar5.src,
     name: "Carlos Rodriguez",
     username: "@carlos_rodriguez",
@@ -55,7 +55,7 @@ const testimonials: Testimonial[] = [
     username: "@william_lee",
   },
   {
-    text: "Caps AI has helped us reach a wider audience and grow our following.",
+    text: "SHOU has helped us reach a wider audience and grow our following.",
     imageSrc: avatar7.src,
     name: "Olivia Taylor",
     username: "@olivia_taylor",
@@ -67,7 +67,7 @@ const testimonials: Testimonial[] = [
     username: "@ethan_anderson",
   },
   {
-    text: "Caps AI has everything we need in one platform. It’s a must-have!",
+    text: "SHOU has everything we need in one platform. It’s a must-have!",
     imageSrc: avatar9.src,
     name: "Emma Walker",
     username: "@emma_walker",

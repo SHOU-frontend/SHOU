@@ -9,6 +9,7 @@ import ProductShowcase from "./sections/ProductShowcase";
 import ServiceOne from "./sections/ServiceOne";
 import Testimonials from "./sections/Testimonials";
  
+import Footer from "./sections/Footer";
 import Feature from "./sections/Feature";
 
 export default function Home() {
@@ -44,6 +45,9 @@ export default function Home() {
       </div>
       <div data-aos="fade-up"  className="mt-5">
         <Testimonials />
+      </div>
+      <div data-aos="fade-up"  className="mt-5">
+        <Footer />
       </div>
 
      </div>

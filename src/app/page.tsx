@@ -9,7 +9,7 @@ import ProductShowcase from "./sections/ProductShowcase";
 import ServiceOne from "./sections/ServiceOne";
 import Testimonials from "./sections/Testimonials";
  
-import Footer from "./sections/footer";
+import Footer from "./sections/Footer";
 import Feature from "./sections/Feature";
 
 export default function Home() {

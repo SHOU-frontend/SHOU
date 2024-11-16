@@ -1,39 +1,41 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react"; // Import Menu and Close icons
 import logo from "@/app/assets/logo.jpg";
 import Image from "next/image";
-import MenuIcon from "@/app/assets/menu.svg";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function Header() {
-  // State to track if the user has scrolled
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // State for mobile menu toggle
+  const menuRef = useRef<HTMLDivElement>(null); // Ref for the sliding menu
 
-  // Scroll to section handler with proper TypeScript typing
+  // Scroll to section handler
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+    setMenuOpen(false); // Close menu after clicking
   };
 
-  // Check the scroll position and update the state
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true); // Set to true when the page is scrolled down 50px
-      } else {
-        setScrolled(false); // Set to false when back to top
+      setScrolled(window.scrollY > 50); // Check if user scrolled down 50px
+    };
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setMenuOpen(false); // Close menu if clicked outside
       }
     };
 
-    // Add the scroll event listener
     window.addEventListener("scroll", handleScroll);
+    document.addEventListener("mousedown", handleClickOutside); // Add listener for clicks outside the menu
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside); // Cleanup listener
     };
   }, []);
 
@@ -41,8 +43,8 @@ function Header() {
     <header
       className={`sticky top-0 transition-all z-50 ${
         scrolled
-          ? "bg-neutral-900 bg-opacity-50 backdrop-blur-lg"
-          : "bg-neutral-900 bg-opacity-80 backdrop-blur-md"
+          ? "bg-neutral-900 bg-opacity-80 backdrop-blur-lg"
+          : "bg-neutral-900 bg-opacity-50 backdrop-blur-md"
       } rounded-lg shadow-lg`}
     >
       {/* Top Bar */}
@@ -72,9 +74,14 @@ function Header() {
             </div>
 
             {/* Menu Icon for smaller screens */}
-            <MenuIcon className="h-5 w-5 md:hidden text-white" />
+            <div
+              className="h-6 w-6 md:hidden text-white cursor-pointer"
+              onClick={() => setMenuOpen(!menuOpen)} // Toggle menu state
+            >
+              {menuOpen ? <X /> : <Menu />} {/* Show Menu or Close icon */}
+            </div>
 
-            {/* Navigation Links */}
+            {/* Desktop Navigation Links */}
             <nav className="hidden md:flex gap-6 text-white/60 items-center">
               <button
                 onClick={() => scrollToSection("top")}
@@ -127,6 +134,74 @@ function Header() {
           </div>
         </div>
       </div>
+
+      {/* Sliding Menu Sheet for Mobile */}
+      {menuOpen && (
+        <div
+          ref={menuRef} // Attach ref to the sliding menu
+          className="fixed top-0 right-0 h-full w-3/4 bg-neutral-900 text-white transform transition-transform duration-300 translate-x-0 z-50 shadow-xl"
+        >
+          {/* Close Button */}
+          <div className="flex justify-end p-4">
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="text-white hover:text-gray-300 focus:outline-none"
+            >
+              <X size={24} />
+            </button>
+          </div>
+
+          <nav className="flex flex-col gap-3 px-6 py-5 min-h-screen bg-neutral-900">
+            <button
+              onClick={() => scrollToSection("top")}
+              className="hover:text-gray-300 text-lg"
+            >
+              How it works
+            </button>
+            <button
+              onClick={() => scrollToSection("features")}
+              className="hover:text-gray-300 text-lg"
+            >
+              Features
+            </button>
+            <button
+              onClick={() => scrollToSection("Product")}
+              className="hover:text-gray-300 text-lg"
+            >
+              Product
+            </button>
+            <button
+              onClick={() => scrollToSection("Services")}
+              className="hover:text-gray-300 text-lg"
+            >
+              Services
+            </button>
+            <button
+              onClick={() => scrollToSection("Testimonials")}
+              className="hover:text-gray-300 text-lg"
+            >
+              Testimonials
+            </button>
+            <button
+              onClick={() => scrollToSection("Contact")}
+              className="hover:text-gray-300 text-lg"
+            >
+              Contact Us
+            </button>
+            <button
+              className="bg-white text-black px-4 py-2 rounded-lg font-medium tracking-tight mt-4"
+              onClick={() =>
+                window.open(
+                  "https://p69cyz35nj5.typeform.com/to/Y3NpSTBy",
+                  "_blank"
+                )
+              }
+            >
+              Get in touch
+            </button>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

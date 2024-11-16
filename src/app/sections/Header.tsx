@@ -63,14 +63,17 @@ function Header() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className="rounded overflow-hidden w-10 h-10">
-              <Image
-                src={logo}
-                alt="shou logo"
-                height={40}
-                width={40}
-                className="rounded"
-              />
+            <div className="flex items-center rounded overflow-hidden">
+              <div className="w-10 h-10">
+                <Image
+                  src={logo}
+                  alt="SHOU logo"
+                  height={50}
+                  width={50}
+                  className="rounded"
+                />
+              </div>
+              <span className="bg-gradient-to-b from-[#e96d32] to-[#ea2b29] text-transparent bg-clip-text font-bold font-myraid text-3xl ml-4">SHOU</span>
             </div>
 
             {/* Menu Icon for smaller screens */}

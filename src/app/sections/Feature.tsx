@@ -48,12 +48,12 @@ const Feature: React.FC = () => {
           </div> */}
           <h4
             data-aos="fade-left"
-            className="text-4xl font-bold leading-snug mt-2"
+            className="text-xl lg:text-4xl font-bold leading-snug mt-2"
           >
             A versatile application designed to enhance industry-specific
             operations by integrating
           </h4>
-          <h4 data-aos="fade-right" className="text-4xl font-bold leading-snug">
+          <h4 data-aos="fade-right" className="text-xl lg:text-4xl font-bold leading-snug">
             essential tools and production capabilities into a unified system
           </h4>
         </div>
@@ -83,7 +83,7 @@ const Feature: React.FC = () => {
             </div>
 
             {/* Grid Layout */}
-            <div className="grid grid-cols-2 gap-8 text-center relative">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-center relative">
               {/* First Row of Service Items */}
               <ServiceItem
                 icon={<FaCogs />}

@@ -119,26 +119,26 @@ const ServiceOne = () => {
             <div className="    bg-orange-700 rounded-full p-3">
               <span className="text-2xl">✴️</span>
             </div>
-            <h3 className="text-xl font-semibold">Caps Chatbot</h3>
+            <h3 className="text-xl font-semibold">AidAssistant</h3>
           </div>
           <div className="bg-neutral-800 p-4 rounded-lg flex flex-col space-y-2">
             <div className="flex justify-between">
               <p className="text-gray-400">User</p>
-              <p className="text-gray-400">Hi there, I want help</p>
+              <p className="text-gray-400">Hello, I need assistance with my tasks</p>
             </div>
             <div className="flex justify-between">
-              <p className="text-gray-400">Bot</p>
+              <p className="text-gray-400 mr-4">Bot</p>
               <p className="text-gray-400">
-                Hello user, I am here to help you. How can I assist you today?
+                Hi! I'm your AI Assistant. Let me help you streamline your tasks. What do you need help with today?
               </p>
             </div>
             <p className="text-orange-500 font-semibold">✔️ Problem solved</p>
           </div>
           <h4 className="text-xl font-semibold mt-4">
-            It's safe and effective
+            Ensuring a productive and efficient workplace.
           </h4>
           <p className="text-gray-400">
-            Chat with our bot to get the best services for your business.
+            Interact with me for instant support and efficient task management!
           </p>
         </div>
 

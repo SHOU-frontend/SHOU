@@ -77,7 +77,7 @@ const Footer = () => {
         <div className="mt-10 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm">© 2024 SHOU. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0 justify-center">
-            <div className="w-8 h-8 rounded-full flex items-center justify-center border hover:bg-gray-800  cursor-pointer transition-colors">
+            {/* <div className="w-8 h-8 rounded-full flex items-center justify-center border hover:bg-gray-800  cursor-pointer transition-colors">
               <Instagram className="w-4 h-4" />
             </div>
             <div className="w-8 h-8 rounded-full flex items-center justify-center border hover:bg-gray-800 cursor-pointer transition-colors">
@@ -85,8 +85,13 @@ const Footer = () => {
             </div>
             <div className="w-8 h-8 rounded-full flex items-center justify-center border hover:bg-gray-800 cursor-pointer transition-colors">
               <Twitter className="w-4 h-4" />
-            </div>
-            <div className="w-8 h-8 rounded-full flex items-center justify-center border hover:bg-gray-800  cursor-pointerhover:bg-gray-800">
+            </div> */}
+            <div
+              className="w-8 h-8 rounded-full flex items-center justify-center border hover:bg-gray-800 cursor-pointer"
+              onClick={() =>
+                window.open("https://www.linkedin.com/showcase/getshou-com/", "_blank") // LinkedIn URL
+              }
+            >
               <Linkedin className="w-4 h-4" />
             </div>
           </div>
